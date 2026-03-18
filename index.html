@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医療用語かんたん変換 | RyoWorks</title>
+    <meta name="description" content="難しい医療用語を、患者さんにもわかるやさしい言葉に変換するAIツール">
+    <meta property="og:title" content="医療用語かんたん変換 | RyoWorks">
+    <meta property="og:description" content="難しい医療用語を、患者さんにもわかるやさしい言葉に変換するAIツール">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏥 医療用語かんたん変換</h1>
+        <p>むずかしい医療用語を、やさしい言葉に変換します</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="input-section">
+                <label for="term-input">医療用語を入力</label>
+                <input
+                    type="text"
+                    id="term-input"
+                    placeholder="例: 心筋梗塞、MRI、HbA1c、生検..."
+                    maxlength="500"
+                >
+                <div class="char-count"><span id="char-count">0</span> / 500</div>
+
+                <label for="mode-select">変換モード</label>
+                <div class="mode-buttons">
+                    <button class="mode-btn active" data-mode="patient">
+                        <span class="mode-icon">👤</span>
+                        <span class="mode-label">患者さん向け</span>
+                        <span class="mode-desc">一般の方にわかる表現</span>
+                    </button>
+                    <button class="mode-btn" data-mode="child">
+                        <span class="mode-icon">👦</span>
+                        <span class="mode-label">こども向け</span>
+                        <span class="mode-desc">小学生にもわかる表現</span>
+                    </button>
+                    <button class="mode-btn" data-mode="detail">
+                        <span class="mode-icon">📋</span>
+                        <span class="mode-label">くわしく</span>
+                        <span class="mode-desc">もう少し詳しい説明</span>
+                    </button>
+                </div>
+
+                <button id="convert-btn" class="primary-btn">変換する</button>
+            </div>
+
+            <div class="output-section">
+                <div id="result-area" class="result-area">
+                    <p class="placeholder-text">医療用語を入力して「変換する」を押してください</p>
+                </div>
+                <button id="copy-btn" class="copy-btn" style="display: none;">コピー</button>
+            </div>
+        </div>
+
+        <section class="examples">
+            <h2>こんな用語を変換できます</h2>
+            <div class="example-tags">
+                <button class="example-tag">心筋梗塞</button>
+                <button class="example-tag">MRI</button>
+                <button class="example-tag">HbA1c</button>
+                <button class="example-tag">生検</button>
+                <button class="example-tag">CT検査</button>
+                <button class="example-tag">動脈硬化</button>
+                <button class="example-tag">糖尿病</button>
+                <button class="example-tag">心電図</button>
+            </div>
+        </section>
+
+        <section class="how-to-use">
+            <h2>使い方</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>医療用語や検査名を入力</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>変換モードを選ぶ</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>AIがやさしい言葉に変換</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>※ このツールはポートフォリオ作品です。医学的なアドバイスを行うものではありません。</p>
+        <p>© 2026 RyoWorks｜医療×AI</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
